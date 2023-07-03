@@ -1,2 +1,2 @@
-# thonnyTN2
+# PyTn
 ThonnyTN with CI / CD
