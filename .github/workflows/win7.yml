@@ -27,7 +27,7 @@ jobs:
       - uses: actions/setup-python@v4
       # Runs a single command using the runners shell
       - name: download dependencies
-        run: py -m pip download -r $GITHUB_WORKSPACE/requirements.txt -d depsx64
+        run: py -m pip download -r "./requirements.txt" -d depsx64
       - uses: nadeemjazmawe/inno-setup-action-cli@v6.0.5
         with: 
           filepath: './simpleInstallerWin7.iss'
