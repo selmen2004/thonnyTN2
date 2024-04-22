@@ -1,0 +1,41 @@
+name: Créer PyTN
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Run Python Script
+        run: python_last_version.py         
+
+        
+      - name: Download Dependencies
+        run: py -m pip download -r "./requirements.txt" -d depsx64
+        
+      - name: Ajout des autres whl
+        run: cp *.whl depsx64
+        
+      - uses: nadeemjazmawe/inno-setup-action-cli@v6.0.5
+        with: 
+          filepath: './simpleInstallerWin10x64.iss'
+        
+      - name: Create GitHub Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            setup.exe
+          token: ${{ secrets.GITHUB_TOKEN }}
