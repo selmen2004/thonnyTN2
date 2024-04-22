@@ -6,8 +6,8 @@
 #define PatchVersion "{#SetupSetting('PATCH')}"
 
  
-#define PythonVersion "3.12.1"
-#define PythonStrictVersion "312"
+#define PythonVersion "{#MajorVersion}.{#MinorVersion}.{#PatchVersion}"
+#define PythonStrictVersion "{#MajorVersion}{#MinorVersion}{#PatchVersion}"
 
 #define arch "amd64"
 #define PythonLocalInstallDir "%localappdata%\Programs\Python\Python"+PythonStrictVersion+"\"
