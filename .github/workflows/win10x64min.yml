@@ -17,9 +17,12 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
-
+          
+      - name: Install requests
+        run: py -m pip install requests
+        
       - name: Run Python Script
-        run: python_last_version.py         
+        run: 'python ./python_last_version.py'         
 
         
       - name: Download Dependencies
