@@ -31,13 +31,15 @@ jobs:
         
       - name: read 
         run: |
-          VERSION=$(cat python.version)
-          MAJOR=$(echo $VERSION | cut -d'.' -f1)
-          MINOR=$(echo $VERSION | cut -d'.' -f2)
-          PATCH=$(echo $VERSION | cut -d'.' -f3)
-          echo "::set-output name=major::$MAJOR"
-          echo "::set-output name=minor::$MINOR"
-          echo "::set-output name=patch::$PATCH"
+          for /f "delims=" %%i in (python.version) do set VERSION=%%i
+          for /f "tokens=1,2,3 delims=." %%a in ("%VERSION%") do (
+              set MAJOR=%%a
+              set MINOR=%%b
+              set PATCH=%%c
+          )
+          echo ::set-output name=major::%MAJOR%
+          echo ::set-output name=minor::%MINOR%
+          echo ::set-output name=patch::%PATCH%
       
       - uses: nadeemjazmawe/inno-setup-action-cli@v6.0.5
         with: 
