@@ -56,5 +56,5 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            mysetup.exe
-          token: ${{ secrets.GITHUB_TOKEN }}
+            Output\mysetup.exe
+          
