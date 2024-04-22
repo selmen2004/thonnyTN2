@@ -38,9 +38,20 @@ jobs:
               set MINOR=%%b
               set PATCH=%%c
           )
-          echo ::set-output name=major::%MAJOR%
-          echo ::set-output name=minor::%MINOR%
-          echo ::set-output name=patch::%PATCH%
+      - name: Save major version
+        run: |
+          echo "MAJOR=${{ env.MAJOR_VERSION }}" >> $GITHUB_STATE
+          echo "Major version: $MAJOR_VERSION"
+      
+      - name: Save minor version
+        run: |
+          echo "MINOR=${{ env.MINOR_VERSION }}" >> $GITHUB_STATE
+          echo "Minor version: $MINOR_VERSION"
+      
+      - name: Save patch version
+        run: |
+          echo "PATCH=${{ env.PATCH_VERSION }}" >> $GITHUB_STATE
+          echo "Patch version: $PATCH_VERSION"
       
       - uses: nadeemjazmawe/inno-setup-action-cli@v6.0.5
         with: 
