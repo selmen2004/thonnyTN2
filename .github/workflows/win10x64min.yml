@@ -44,6 +44,7 @@ jobs:
           echo "MAJOR="%MAJOR% >> "$GITHUB_ENV"
           echo "MINOR="%MINOR% >> "$GITHUB_ENV"
           echo "PATCH="%PATCH% >> "$GITHUB_ENV"
+          cat "$GITHUB_ENV"
       
       
       - uses: nadeemjazmawe/inno-setup-action-cli@v6.0.5
