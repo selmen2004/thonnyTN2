@@ -29,14 +29,24 @@ jobs:
       - name: Ajout des autres whl
         run: cp *.whl depsx64
         
+      - name: read 
+        run: |
+          VERSION=$(cat python.version)
+          MAJOR=$(echo $VERSION | cut -d'.' -f1)
+          MINOR=$(echo $VERSION | cut -d'.' -f2)
+          PATCH=$(echo $VERSION | cut -d'.' -f3)
+          echo "::set-output name=major::$MAJOR"
+          echo "::set-output name=minor::$MINOR"
+          echo "::set-output name=patch::$PATCH"
+      
       - uses: nadeemjazmawe/inno-setup-action-cli@v6.0.5
         with: 
-          filepath: './simpleInstallerWin10x64.iss'
+          filepath: './simpleInstallerWin10x64.iss /dmajor=${MAJOR} /dminor=${MINOR} /dpatch=${PATCH}'
         
       - name: Create GitHub Release
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            setup.exe
+            mysetup.exe
           token: ${{ secrets.GITHUB_TOKEN }}
