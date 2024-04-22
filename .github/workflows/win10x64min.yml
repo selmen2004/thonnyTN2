@@ -48,7 +48,7 @@ jobs:
       
       - uses: nadeemjazmawe/inno-setup-action-cli@v6.0.5
         with: 
-          filepath: './simpleInstallerWin10x64.iss /dmajor=${MAJOR} /dminor=${MINOR} /dpatch=${PATCH}'
+          filepath: './simpleInstallerWin10x64.iss /dmajor=${{MAJOR}} /dminor=${{MINOR}} /dpatch=${{PATCH}}'
         
       - name: Create GitHub Release
         id: create_release
