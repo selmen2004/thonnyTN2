@@ -1,20 +1,29 @@
+#l'editeur python utilisé
 thonny
-jedi
-setuptools
+#prise en charge de esp32/esp8266
+esptool
+#Ajouts Selmen 
+
+#designer as a python package (shortcut : pyqt5_qt5_designer ) ; loads pyqt5 as well
+pyqt5_qt5_designer
+
+#thonny_palestine_flag
+thonny-autosave
+thonny-loaduiautocomplete
+thonny-tunisiaschools
+
+#needed by thonny
 pyserial
-pylint
-docutils
-mypy
-asttokens
-Send2Trash
 wheel
-pyqt5
+#scientifiques
 pandas
 numpy
 matplotlib
+#economie
 xlrd
 xlsxwriter
 xlwt
 openpyxl
 jupyterlab
 notebook
+
