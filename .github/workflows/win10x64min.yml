@@ -29,7 +29,8 @@ jobs:
       - name: Ajout des autres whl
         run: cp *.whl depsx64
         
-      - name: read 
+      - name: read python version components
+        shell: cmd
         run: |
           for /f "delims=" %%i in (python.version) do set VERSION=%%i
           for /f "tokens=1,2,3 delims=." %%a in ("%VERSION%") do (
