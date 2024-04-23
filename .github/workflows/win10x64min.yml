@@ -64,5 +64,5 @@ jobs:
         with:
           tag_name: ${{ steps.generate_release_tag.outputs.next_release_tag }}
           files: |
-            Output\mysetup.exe
+            ./Output/mysetup.exe
           
