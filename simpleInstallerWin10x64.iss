@@ -61,9 +61,10 @@ Name: "bac_eco\jupyter_notebook"; Description: "Installation Jupyter Notebook"; 
 [Files]
 ;Source: "G:\dev\python\pytn\win7x86\Windows6.1-KB2533623-x86.msu"; DestDir: "{tmp}"; Flags: ignoreversion ;
 ;Source: "G:\dev\python\pytn\win7x86\Windows6.1-KB2999226-x86.msu"; DestDir: "{tmp}"; Flags: ignoreversion ; 
-  Source: "python-{#PythonVersion}-{#arch}.exe"; DestDir: "{tmp}"; Flags: ignoreversion ; Components: "python_installer"
+Source: "python-{#PythonVersion}-{#arch}.exe"; DestDir: "{tmp}"; Flags: ignoreversion ; Components: "python_installer"
 Source: "RefreshEnv.cmd"; DestDir: "{tmp}";
 Source: "depsx64\*.whl" ; DestDir: "{tmp}\deps\";
+Source: "depsx64\*.tar.gz" ; DestDir: "{tmp}\deps\";
 ;Source: "G:\dev\python\pytn\win7x86\designer\*.*" ; DestDir: "{localappdata}\Programs\Python\Python311-32\Lib\site-packages\PyQt5\Qt5\bin\"    ; Components: "bac_sc"
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 [Tasks]
