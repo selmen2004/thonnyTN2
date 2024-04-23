@@ -4,8 +4,8 @@ ThonnyTN
 This is a Python distrubition  based on Thonny IDE meant to be used offline by Tunisian Computer Science  secondary schools teachers and students
 It contains all needed libraries plus :
 
-~~* Esp32 driver for windows , can be automatically installed~~
-~~* ESP32 micropython firmware , can be automatically installed on many cards at once~~
+* ~~Esp32 driver for windows , can be automatically installed~~
+* ~~ESP32 micropython firmware , can be automatically installed on many cards at once~~
 
 List of libraries included :
 
