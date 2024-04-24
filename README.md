@@ -22,7 +22,10 @@ List of libraries included :
 
 # Current Status 
 
-The whole generation process is automated through github actions 
+* The whole generation process is automated through github actions
+* file "python.version" contains python installer to be downloaded and included in distribution
+* many files are not needed and need to be removed later
+
 
 # Ideas: 
 
