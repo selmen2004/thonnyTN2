@@ -1,7 +1,8 @@
 ThonnyTN
 ======
 
-This is a Python distrubition  based on Thonny IDE meant to be used offline by Tunisian Computer Science  secondary schools teachers and students
+This is a Python distrubition  based on Thonny IDE meant to be used offline by Tunisian Computer Science  secondary schools teachers and students.
+
 It contains all needed libraries plus :
 
 * ~~Esp32 driver for windows , can be automatically installed~~
