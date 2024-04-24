@@ -30,7 +30,8 @@ List of libraries included :
 # Ideas: 
 
 - [ ] auto identify latest python version
-- [ ] auto add data to releases description
+- [ ] auto add libs info to releases description
+- [ ] create smaller edition with no python installer
 - [ ] win7 32bits vesion
 - [ ] integrating some other thonny plugins and themes
 - [ ] refactoring the innosetup file into components , libs , python installer and shortcuts
