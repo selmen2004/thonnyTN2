@@ -2,6 +2,7 @@
 thonny
 #prise en charge de esp32/esp8266
 esptool
+
 #Ajouts Selmen 
 
 #designer as a python package (shortcut : pyqt5_qt5_designer ) ; loads pyqt5 as well
@@ -15,11 +16,27 @@ thonny-tunisiaschools
 #needed by thonny
 pyserial
 wheel
-#scientifiques
+
+#thonny themes :
+thonny-onedark
+thonny-202
+thonny-dracula
+
+#Thonny generic plugins
+thonny-block-highlight
+
+#thonny linters :
+thonny-friendly
+thonny-edulint
+thonny-flake
+thonny-error-explainer
+
+#Sections scientifiques
 pandas
 numpy
 matplotlib
-#economie
+
+#Section economie
 xlrd
 xlsxwriter
 xlwt
