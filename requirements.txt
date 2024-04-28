@@ -8,7 +8,7 @@ esptool
 #designer as a python package (shortcut : pyqt5_qt5_designer ) ; loads pyqt5 as well
 pyqt5_qt5_designer
 
-#thonny_palestine_flag
+#thonny_palestine_flag (not in pip )
 thonny-autosave
 thonny-loaduiautocomplete
 thonny-tunisiaschools
@@ -27,9 +27,10 @@ thonny-block-highlight
 
 #thonny linters :
 thonny-friendly
-thonny-edulint
-thonny-flake
-thonny-error-explainer
+#@TODO : Test those :
+#thonny-edulint
+#thonny-flake
+#thonny-error-explainer
 
 #Sections scientifiques
 pandas

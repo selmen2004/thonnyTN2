@@ -52,6 +52,9 @@ Name: "editors\ps_flag_thonny"; Description: "Drapeau Palestinian au lieu de Ukr
 Name: "editors\thonny_autosave"; Description: "Enregistrer automatiqement dans Thonny"; Types: full compact custom;
 Name: "editors\thonny_loaduiautocomplete"; Description: "Détecter automatiquement les composants de l'interface graphique dans Thonny(thonny_loaduiautocomplete)"; Types: full compact custom;
 Name: "editors\thonny_tunisiaschools" ; Description: "Générer le code PyQt5 dans Thonny / Dossier par défaut(thonny_tunisiaschools)"; Types: full compact custom;
+Name: "editors\friendly" ; Description: "Afficher une explication des erreurs dans l'assistant Thonny (thonny_friendly)"; Types: full compact custom;
+Name: "editors\highlight" ; Description: "Délimiteur pour blocs dans thonny (Excellent pour débutant)" ; Types: full compact custom;
+Name: "editors\themes" ; Description: "Thèmes pour Thonny(onedark , 202 , dracula)" ; Types: full compact custom;
 Name: "bac_sc"; Description: "Bibliothèques pour bac scientifiques / bac informatiques : PyQt5 / Numpy / Designer "; Types: full compact custom;
 Name: "bac_eco"; Description: "Bibliothèques pour bac économie:  pandas matplotlib xlrd xlsxwriter xlwt openpyxl"; Types: full compact custom;
 Name: "bac_eco\jupyter_lab"; Description: "Installation Jupyter Lab"; Types: full compact custom;
@@ -105,6 +108,10 @@ Filename:"cmd.exe" ;Parameters: "/q /c mode 80,5 && title القدس لنا وك
 Filename:"cmd.exe" ;Parameters: "/q /c mode 80,5 && title Installation de Thonny Autosave... &&{tmp}\RefreshEnv.cmd &&  py.exe -m pip install thonny-autosave --upgrade --no-index --prefer-binary --find-links {tmp}\deps >> {tmp}\innosetup.log" ;StatusMsg:"Installation de Thonny Autosave  ... "; Components: "editors\thonny_autosave"
 Filename:"cmd.exe" ;Parameters: "/q /c mode 80,5 && title Installation de Thonny loadui autocomplete ... &&{tmp}\RefreshEnv.cmd &&  py.exe -m pip install thonny-loaduiautocomplete --upgrade --no-index --prefer-binary --find-links {tmp}\deps >> {tmp}\innosetup.log" ;StatusMsg:"Installation de Thonny loadui autocomplete   ... "; Components: "editors\thonny_loaduiautocomplete"
 Filename:"cmd.exe" ;Parameters: "/q /c mode 80,5 && title Installation de Thonny PyQt5 helper(thonny-tunisiaschools) ... &&{tmp}\RefreshEnv.cmd &&  py.exe -m pip install thonny-tunisiaschools --upgrade --no-index --prefer-binary --find-links {tmp}\deps >> {tmp}\innosetup.log" ;StatusMsg:"Installation de Thonny PyQt5 helper(thonny-tunisiaschools)   ... "; Components: "editors\thonny_tunisiaschools"
+Filename:"cmd.exe" ;Parameters: "/q /c mode 80,5 && title Installation de Thonny Block Highlighter ... &&{tmp}\RefreshEnv.cmd &&  py.exe -m pip install thonny-block-highlight --upgrade --no-index --prefer-binary --find-links {tmp}\deps >> {tmp}\innosetup.log" ;StatusMsg:"Installation de Thonny Bloc Highlighter   ... "; Components: "editors\highlight"
+Filename:"cmd.exe" ;Parameters: "/q /c mode 80,5 && title Installation de Thonny Themes ... &&{tmp}\RefreshEnv.cmd &&  py.exe -m pip install thonny-onedark thonny-202 thonny-dracula --upgrade --no-index --prefer-binary --find-links {tmp}\deps >> {tmp}\innosetup.log" ;StatusMsg:"Installation de Thonny Themes   ... "; Components: "editors\themes"
+Filename:"cmd.exe" ;Parameters: "/q /c mode 80,5 && title Installation de Thonny Friendly ... &&{tmp}\RefreshEnv.cmd &&  py.exe -m pip install thonny-friendly --upgrade --no-index --prefer-binary --find-links {tmp}\deps >> {tmp}\innosetup.log" ;StatusMsg:"Installation de Thonny Friendly   ... "; Components: "editors\friendly"
+
 
 [Code]
 procedure InitializeWizard;
