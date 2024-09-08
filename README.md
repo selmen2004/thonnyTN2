@@ -1,4 +1,4 @@
-# 🇫🇷 Français | [🇬🇧 English](#english)
+# 🇫🇷 Français | [🇬🇧 English](#-english)
 
 # ThonnyTN
 
