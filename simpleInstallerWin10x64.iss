@@ -12,8 +12,8 @@
 #define arch "amd64"
 #define PythonLocalInstallDir "%localappdata%\Programs\Python\Python"+PythonStrictVersion+"\"
 #define PythonFullInstallationExe "python-{#PythonVersion}.exe"
-#define MyAppName "PyTn"
-#define MyAppVersion "1.0"
+#define MyAppName "ThonnyTN"
+#define MyAppVersion tag
 #define MyAppPublisher "Selmen Arous"
 #define MyAppURL "https://selmen.tn"
 
@@ -34,7 +34,7 @@ ChangesAssociations=yes
 ; Remove the following line to run in administrative install mode (install for all users.)
 ;PrivilegesRequired=admin
 PrivilegesRequiredOverridesAllowed=commandline
-OutputBaseFilename=mysetup
+OutputBaseFilename={#MyAppName}_{#MyAppVersion}
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
