@@ -1,4 +1,4 @@
-name: Créer PyTN
+name: Créer Nouvelle Version de ThonnyTN
 
 on:
   #push:
@@ -49,10 +49,6 @@ jobs:
           echo PATCH=%PATCH% >> %GITHUB_ENV%
           cat %GITHUB_ENV%
       
-      
-      - uses: nadeemjazmawe/inno-setup-action-cli@v6.0.5
-        with: 
-          filepath: './simpleInstallerWin10x64.iss /dmajor=${{env.MAJOR}} /dminor=${{env.MINOR}} /dpatch=${{env.PATCH}}'
       - name: Generate release tag
         id: generate_release_tag
         uses: amitsingh-007/next-release-tag@v5.0.0
@@ -60,6 +56,11 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           tag_prefix: 'v'
           tag_template: 'yyyy.mm.dd.i'
+        
+      - uses: nadeemjazmawe/inno-setup-action-cli@v6.0.5
+        with: 
+          filepath: './simpleInstallerWin10x64.iss /dmajor=${{env.MAJOR}} /dminor=${{env.MINOR}} /dpatch=${{env.PATCH}} /dtag=${{ steps.generate_release_tag.outputs.next_release_tag }}' 
+      
           
       - name: Create GitHub Release
         id: create_release
@@ -67,5 +68,5 @@ jobs:
         with:
           tag_name: ${{ steps.generate_release_tag.outputs.next_release_tag }}
           files: |
-            ./Output/mysetup.exe
+            ./Output/*.exe
           
