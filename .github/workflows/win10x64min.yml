@@ -27,7 +27,7 @@ jobs:
 
         
       - name: Download Dependencies
-        run: py -m pip download -r "./requirements.txt" -d depsx64
+        run: py -m pip download -r "./requirements.txt" --extra-index-url https://riverbankcomputing.com/pypi/simple/ -d depsx64
         
       - name: Ajout des autres whl
         run: cp *.whl depsx64
